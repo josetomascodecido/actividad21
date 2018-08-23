@@ -1,0 +1,21 @@
+h1 Listing twitters
+
+table
+  thead
+    tr
+      th Tweet
+      th
+      th
+      th
+
+  tbody
+    - @twitters.each do |twitter|
+      tr
+        td = twitter.tweet
+        td = link_to 'Show', twitter
+        td = link_to 'Edit', edit_twitter_path(twitter)
+        td = link_to 'Destroy', twitter, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Twitter', new_twitter_path

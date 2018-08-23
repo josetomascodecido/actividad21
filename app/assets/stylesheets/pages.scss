@@ -1,0 +1,23 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+.pages{
+  .box{
+    @include border-radius(10px);
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+  }
+  .circle{
+    @include border-radius(100px);
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+  }
+}
